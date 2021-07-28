@@ -44,7 +44,7 @@ pipeline {
 
               script {
 
-			 sh 'docker login -u kumudhanrajan18@gmail.com -p Chok3$lam docker-registry-default'
+			 sh 'docker login -u kumudhanrajan18@gmail.com -p Chok3$lam hub.docker.com'
           		 sh 'docker push kumudhan/jenkins_build_images:1.0.0'
                   }
 
