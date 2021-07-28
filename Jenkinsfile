@@ -44,11 +44,8 @@ pipeline {
 
               script {
 
-                  docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-
-                      dockerImage.push("latest")
-		      dockerImage.push("${env.BUILD_ID}")
-
+			 sh 'docker login -u kumudhanrajan18@gmail.com -p Chok3$lam docker-registry-default'
+          		 sh 'docker push kumudhan/jenkins_build_images:1.0.0'
                   }
 
               } 
