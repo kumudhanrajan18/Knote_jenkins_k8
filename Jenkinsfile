@@ -30,7 +30,7 @@ pipeline {
 
               script { 
 
-                  dockerImage = docker.build registry + ":$BUILD_NUMBER" 
+                  dockerImage = docker.build("kumudhan/jenkins_build_images:${env.BUILD_ID}")
 
               }
 
@@ -42,11 +42,12 @@ pipeline {
 
           steps { 
 
-              script { 
+              script {
 
-                  docker.withRegistry( '', registryCredential ) { 
+                  docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
 
-                      dockerImage.push() 
+                      dockerImage.push("latest")
+		      dockerImage.push("${env.BUILD_ID}")
 
                   }
 
