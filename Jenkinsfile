@@ -1,4 +1,4 @@
-pipeline { 
+pipeline { 	
 
   environment { 
 
@@ -57,6 +57,4 @@ pipeline {
       } 
 
   }
-
-}
 
