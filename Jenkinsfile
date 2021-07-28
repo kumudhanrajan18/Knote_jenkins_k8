@@ -44,7 +44,7 @@ pipeline {
 
               script {
 
-			 sh 'docker login -u kumudhanrajan18@gmail.com -p Chok34lam'
+			 sh 'docker login -u kumudhan -p Chok34lam'
           		 sh 'docker push kumudhan/jenkins_build_images:1.0.0'
                   }
 
