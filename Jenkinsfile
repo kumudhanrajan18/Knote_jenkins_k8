@@ -2,7 +2,7 @@ pipeline {
 
   environment { 
 
-      registry = "kumudhan/kumudhan" 
+      registry = "kumudhan/jenkins_build_images" 
 
       registryCredential = 'dockerhub_id' 
 
