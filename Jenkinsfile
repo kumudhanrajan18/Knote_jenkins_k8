@@ -45,7 +45,7 @@ pipeline {
               script {
 
 			 sh 'docker login -u kumudhan -p Chok34lam'
-          		 sh 'docker push kumudhan/jenkins_build_images:1.0.0'
+          		 sh 'docker push kumudhan/jenkins_build_images:$BUILD_NUMBER'
                   }
 
               } 
